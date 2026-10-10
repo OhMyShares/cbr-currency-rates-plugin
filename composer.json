@@ -1,0 +1,44 @@
+{
+    "name": "ohmyshares/cbr-currency-rates-plugin",
+    "description": "Daily currency exchange rates of the Central Bank of Russia for OhMyShares",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["ohmyshares", "ohmyshares-plugin", "currency rates", "cbr"],
+    "authors": [
+        {
+            "name": "Vitaly",
+            "email": "vitaly@ohmyshares.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "ext-curl": "*",
+        "ext-simplexml": "*",
+        "ohmyshares/plugin": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OhMyShares\\PluginCbrCurrencyRates\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OhMyShares\\PluginCbrCurrencyRates\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "ohmyshares": {
+            "class": "OhMyShares\\PluginCbrCurrencyRates\\Plugin",
+            "title": "CBR currency rates"
+        }
+    }
+}
